@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Web testing for POST request!</h1>
+    <title>My Site</title>
+</head>
+   
+
+<body>
+     <p>Enter text you want to show:</p>
+     <form  method="post" onsubmit="exec(); return false;">
+         <input type="text" id="something" placeholder="Enter text" name="data">
+         <input type="submit" value="Submit">
+     </form>
+     <p id="output"></p>
+</body>
+
+<script type="text/javascript">
+    function exec()
+    {
+    var data= (document.getElementById("something").value);
+    var text= "Văn bản bạn đã nhập là: "+ data;
+    output=text;
+    document.getElementById("output").innerHTML= text;
+    return 0;
+    }
+</script>
+
+</html>
